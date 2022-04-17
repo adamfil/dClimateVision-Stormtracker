@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* dropdown menu options */
+.VirtualizedSelectOption {
+    background-color: white;
+    color: black;
+ }
+
+ #id_of_dropdown {
+    width: 12%;
+    }
