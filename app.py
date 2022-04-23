@@ -58,7 +58,16 @@ html.Div([
         dcc.Tab(label='Historical Data', value='tab-2-example-graph', style=tab_style, selected_style=tab_selected_style),
     ]),
     html.Div(id='tabs-content-example-graph')
-])])
+]),
+
+html.Div([
+    # plot figure
+    html.A("github.com/adamfil/dclimatevision-stormtracker", href='https://github.com/adamfil/dclimatevision-stormtracker', target="_blank"),
+    ], style={
+        'display': 'flex', "justify-content": "center", "align-items": "center"
+    }),
+
+])
 
 @app.callback(Output('tabs-content-example-graph', 'children'),
               Input('tabs-example-graph', 'value'))
@@ -198,6 +207,7 @@ def update_graph(dropdown):
     frame = frame[frame['STORM_SPEED'].notna()]
     frame = frame.dropna(axis=1, how='any')
     frame = frame[frame.NAME != 'NONAME']
+    frame = frame[frame.NAME != 'NOT_NAMED']
     frame = frame[frame.NAME != 'INVEST']
     frame = frame[frame.NAME != 'TEST']
     frame = frame.sort_values('NAME')

@@ -21,3 +21,10 @@ body {
     width: 20%;
     padding: 10px;
     }
+
+a {
+    text-decoration: underline;
+    color: inherit;
+    transition: opacity 100ms ease-in-out; }
+
+a:hover, a:active {color:   #c6ceff; }
