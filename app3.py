@@ -4,9 +4,11 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
+import dash_bootstrap_components as dbc
 
+theme = [dbc.themes.SLATE]
 
-app = Dash(__name__)
+app = Dash(__name__, external_stylesheets=theme)
 
 app.layout = html.Div(
 
@@ -21,7 +23,7 @@ app.layout = html.Div(
     },
     
     children=[
-    html.H1(children='dClimateVision - Stormpath', style={"display": "flex",
+    html.H1(children='dClimateVision: Stormtracker', style={"display": "flex",
         "justify-content": "center",
         "align-items": "center",}),
 
@@ -36,9 +38,9 @@ app.layout = html.Div(
         dcc.Dropdown(
             id="id_of_dropdown",
             options=[
+                {'label': 'North Atlantic', 'value': 'atcf-AL.csv'},
                 {'label': 'Central North Pacific', 'value': 'atcf-CP.csv'},
                 {'label': 'North-East Pacific', 'value': 'atcf-EP.csv'},
-                {'label': 'North Atlantic', 'value': 'atcf-AL.csv'},
                 #{'label': 'South Atlantic Ocean', 'value': 'SL'},
                 ],
             value='atcf-CP.csv'
