@@ -244,4 +244,4 @@ def update_graph(dropdown):
     return [fig]
 
 if __name__ == '__main__':
-    app.run_server(debug=False, port=8051)
+    app.run_server(debug=False)
