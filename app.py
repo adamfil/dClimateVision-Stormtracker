@@ -115,12 +115,12 @@ def render_content(tab):
                         dcc.Dropdown(
                             id="id_of_dropdown2",
                             options=[
-                                {'label': 'historical-NI', 'value': 'historical-NI.csv'},
-                                {'label': 'historical-SI', 'value': 'historical-SI.csv'},       
-                                {'label': 'historical-NA', 'value': 'historical-NA.csv'},                           
-                                {'label': 'historical-EP', 'value': 'historical-EP.csv'},
-                                {'label': 'historical-WP', 'value': 'historical-WP.csv'},
-                                {'label': 'historical-SP', 'value': 'historical-SP.csv'},
+                                {'label': 'North Indian Ocean', 'value': 'historical-NI.csv'},
+                                {'label': 'South Indian Ocean', 'value': 'historical-SI.csv'},       
+                                {'label': 'North Atlantic', 'value': 'historical-NA.csv'},                           
+                                {'label': 'Eastern Pacific', 'value': 'historical-EP.csv'},
+                                {'label': 'Western Pacific', 'value': 'historical-WP.csv'},
+                                {'label': 'Southern Pacific', 'value': 'historical-SP.csv'},
                                 ],
                             value='historical-NI.csv',
                             searchable=False,
